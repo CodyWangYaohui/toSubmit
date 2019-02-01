@@ -20,6 +20,7 @@ public class Locator {
     /** Maximum valid longitude. */
     public static final double MAX_LONGITUDE = 180.0;
 
+    /** Minimum valid longitude. */
     public static final double MIN_LONGITUDE = -180.0;
 
     /** Random number generator for use by this class. */
@@ -47,8 +48,27 @@ public class Locator {
      */
     public static int farthestNorth(final double[] latitudes, final double[] longitudes,
                                     final boolean[] validLocations) {
-        return 0;
+        int index = -1;
+        double max = 0;
+        for (int i = 0; i < latitudes.length; i++) {
+            if (validLocations[i]) {
+                if (index == -1) {
+                    index = i;
+                    max = latitudes[i];
+                }
+
+                if (index != -1 && latitudes[i] > max) {
+                    index = i;
+                    max = latitudes[i];
+                }
+            }
+        }
+
+
+        return index;
     }
+
+
 
     /**
      * Determine whether you've already been in this exact spot.
@@ -66,7 +86,19 @@ public class Locator {
     public static boolean beenHere(final int currentIndex,
                             final double[] latitudes, final double[] longitudes,
                             final boolean[] validLocations) {
-        return false;
+        boolean beenHere = false;
+        for (int i = 0; i < latitudes.length; i++) {
+            if (validLocations[i]) {
+                if (latitudes[i] == latitudes[currentIndex] && i != currentIndex) {
+                    if (longitudes[i] == longitudes[currentIndex]) {
+                        beenHere = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return beenHere;
     }
 
     /**
