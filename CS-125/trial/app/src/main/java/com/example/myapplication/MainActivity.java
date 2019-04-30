@@ -19,7 +19,8 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
+import java.util.Map;
+import java.util.HashMap;
 
 
 import android.view.Window;
@@ -160,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
-                "http://api.openweathermap.org/data/2.5/weather?zip=61820,us",
+                "http://api.openweathermap.org/data/2.5/weather?zip=61820,us&APPID=5a337d94e431fa24402018f3163f08f1",
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
