@@ -5,7 +5,7 @@
     android:id="@+id/theWholePicture"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sonny"
+    android:background="@drawable/siebelcenter"
     tools:context=".MainActivity">
 
     <ImageView
@@ -148,10 +148,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/shampooing" />
 
     <ImageView
@@ -216,10 +216,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintVertical_bias="0.004"
         app:srcCompat="@drawable/scissoring" />
 
     <ImageView
@@ -338,7 +338,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
+        app:layout_constraintVertical_bias="0.149"
         app:srcCompat="@drawable/watering" />
 
     <ImageButton

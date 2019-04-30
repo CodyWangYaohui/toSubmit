@@ -241,9 +241,7 @@ public class MainActivity extends AppCompatActivity {
         hair5 = findViewById(R.id.hair5);
 
         weather.setOnClickListener(v -> {
-            if (!gameState && !SthOnHead) {
-                startAPICall();
-            }
+            startAPICall();
         });
 
 
@@ -283,6 +281,7 @@ public class MainActivity extends AppCompatActivity {
             scissoring.setVisibility(View.INVISIBLE);
             watering.setVisibility(View.INVISIBLE);
             shampooing.setVisibility(View.INVISIBLE);
+            theWholePicture.setBackground(getDrawable(R.drawable.siebelcenter));
 
 
             gameState = false;
